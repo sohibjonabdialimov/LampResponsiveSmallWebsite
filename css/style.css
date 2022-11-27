@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('grid.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #686574;
+  background-color: #fff;
+}
+
+h1, h2, h3{
+  line-height: 1.1;
+  color: #332e48;
+}
+h1 {
+  position: relative;
+  font-size: 3.5rem;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.75rem;
+  margin: 1rem 0 1.5rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.85rem;
+  margin: 1rem 0 1.5rem;
+  font-weight: 700;
+}
+
+p{
+  margin: 0 0 1.5rem;
+}
+p.lead {
+  font-size: 1.25rem;
+  margin: 0 0 2.5rem;
+}
+a{
+  color: inherit;
+  transition: color .2s ease;
+  -webkit-transition: color .2s ease;
+}
+img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section{
+  padding: 5rem 0;
+}
+.toggle-nav{
+  display: none;
+}
+nav{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.204);
+  display: block;
+}
+nav .grid > [class*="column-"]{
+  padding: 0 1rem;
+}
+nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  margin: 0.25rem 0;
+  left: 0;
+  padding: 0;
+  text-align: center;
+  gap: 30px;
+}
+nav ul li{
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+}
+nav ul li a:hover{
+  color: blue;
+  filter: drop-shadow(0 0 10px blue);
+  font-weight: 700;
+  transition: all .3s ease;
+}
+
+#logo {
+  font-family: 'Rubik Distressed', cursive;
+  font-size: 1.25rem;
+  margin: 0;
+  color: #332e48;
+  text-transform: uppercase;
+}
+.container{
+  max-width: 75rem;
+}
+header{
+  padding: 15rem 0 10rem;
+  background: #fff url('../img/bgFon3.webp');
+  background-size: cover;
+  background-position: bottom right;
+}
+header section{
+  padding: 0;
+}
+.intro span {
+  position: relative;
+  left: 50px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.intro span::before{
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 1px;
+  background-color: #000;
+  top: 50%;
+  left: -23%;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: .0625rem;
+  background: rgb(23, 42, 186);
+  padding: 1.125rem 3rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+.btn:hover {
+  background: rgb(18, 31, 128);
+}
+.text-center{
+  text-align: center;
+}
+.grid > [class*="column-"]{
+  padding: 0 1rem;
+}
+
+figure{
+  position: relative;
+  display: block;
+  margin: 0;
+}
+figure .img-container{
+ height: 20rem;
+ border-radius: 0.5rem;
+ overflow: hidden;
+}
+figure .img-container img{
+  transition: transform .15s ease;
+}
+figure:hover .img-container img{
+  transform: scale(1.15);
+}
+
+@media (max-width:36rem){ /*576px*/
+  body{
+    font-size: 1rem;
+  }
+  h1{
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  .toggle-nav{
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 600;
+    margin: .325rem 0;
+    color: #999;
+  }
+  .toggle-btn{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-list{
+    width: 300px;
+    background-color: #f50a0a;
+    flex-direction: column;
+    padding: 50px 0px 200px;
+    position: absolute;
+    left: -300px;
+    top: 80px;
+    margin: 0;
+    transition: left .5s ease;
+    opacity: .9;
+    gap: 20px;
+    border-bottom-right-radius: 100%;
+  }
+  .nav-item{
+    padding: 10px 0;
+  }
+  .show{
+    left: 0;
+  }
+  .nav-item a{
+    color: #fff;
+    font-size: 1.25rem;
+  }
+  .toggle-btn{
+    position: relative;
+    z-index: 10;
+  }
+}
